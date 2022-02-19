@@ -2,6 +2,7 @@
     "Recipes":[{
       "id": 1,
       "name": "Crock Pot Roast",
+      "meal": "Dinner",
       "ingredients": [
           {
               "quantity": "1",
@@ -47,6 +48,7 @@
   {
       "id": 2,
       "name": "Roasted Asparagus",
+      "meal": "Dinner",
       "ingredients": [
           {
               "quantity": "1 lb",
@@ -92,7 +94,9 @@
       "originalURL": "http://www.food.com/recipe/roasted-asparagus-50847"
   },
   {
+      "id": 3,
       "name": "Curried Lentils and Rice",
+      "meal":"Dinner",
       "ingredients": [
           {
               "quantity": "1 quart",
@@ -137,8 +141,9 @@
       "imageURL": "http://dagzhsfg97k4.cloudfront.net/wp-content/uploads/2012/05/lentils3.jpg"
   },
   {
-      "id": 3,
+      "id": 4,
       "name": "Big Night Pizza",
+      "meal": "lunch",
       "ingredients": [
           {
               "quantity": "5 teaspoons",
@@ -202,8 +207,9 @@
       "imageURL": "http://upload.wikimedia.org/wikipedia/commons/c/c7/Spinach_pizza.jpg"
   },
   {
-      "id": 3,
+      "id": 5,
       "name": "Cranberry and Apple Stuffed Acorn Squash Recipe",
+      "meal":"Dinner",
       "ingredients": [
           {
               "quantity": "2",
@@ -260,8 +266,9 @@
       "originalURL": ""
   },
   {
-      "id": 4,
+      "id": 6,
       "name": "Mic's Yorkshire Puds",
+      "meal":"Dinner",
       "ingredients": [
           {
               "quantity": "200g",
@@ -310,8 +317,9 @@
       "originalURL": "http://upload.wikimedia.org/wikipedia/commons/f/f9/Yorkshire_Pudding.jpg"
   },
   {
-      "id": 5,
+      "id": 7,
       "name": "Old-Fashioned Oatmeal Cookies",
+      "meal": "dessert",
       "ingredients": [
           {
               "quantity": "1 cup",
@@ -402,8 +410,9 @@
       "originalURL": "#"
   },
   {
-      "id": 6,
+      "id": 7,
       "name": "Blueberry Oatmeal Squares",
+      "meal": "dessert",
       "ingredients": [
           {
               "quantity": "2-1/2 cups",
@@ -464,7 +473,7 @@
           "Press half into 8-inch (2 L) square parchment paper–lined metal cake pan; spread with blueberry filling.",
           "Bake in centre of 350°F oven until light golden, about 45 minutes.",
           "Let cool on rack before cutting into squares.",
-          "(Make-ahead: Cover and refrigerate for up to 2 days or overwrap with heavy-duty foil and freeze for up to 2 weeks.)"
+          "(Make-ahead: Cover and refrigerate for up to 2 days or wrap with heavy-duty foil and freeze for up to 2 weeks.)"
       ],
       "timers": [
           10,
@@ -480,8 +489,9 @@
       "originalURL": "http://www.canadianliving.com/food/blueberry_oatmeal_squares.php"
   },
   {
-      "id": 7,
+      "id": 8,
       "name": "Curried chicken salad",
+      "meal": "Dinner",
       "ingredients": [
           {
               "quantity": "3",
@@ -568,6 +578,89 @@
       ],
       "imageURL": "http://www.chatelaine.com/wp-content/uploads/2013/05/Curried-chicken-salad.jpg",
       "originalURL": "http://www.chatelaine.com/recipe/stovetop-cooking-method/curried-chicken-salad/"
+      },
+      {
+        "id": 9,
+        "name": "Scrambled Eggs",
+        "meal":"breakfast",
+        "ingredients": [
+            {
+                "quantity": "2",
+                "name": "eggs",
+                "type": "Misc"
+            },
+            {
+                "quantity": "1/2 cup",
+                "name": "milk",
+                "type": "Misc"
+            },
+            {
+                "quantity": "1/4 stick",
+                "name": "butter",
+                "type": "Misc"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "pepper",
+                "type": "Condiments"
+            },
+            {
+                "quantity": "1 tsp",
+                "name": "salt",
+                "type": "Condiments"
+            }
+        ],
+        "steps": [
+            "Bring sauce pan to medium heat.",
+            "Add 1/4 stick of butter.",
+            "Whisk eggs in bowl.",
+            "Pour eggs into sauce pan, mixing continuously until desired consistency.",
+            "Place eggs on plate",
+            "Enjoy!"
+        ],
+        "timers": [
+            0,
+            0,
+            20,
+            20,
+            0
+        ],
+        "imageURL": "https://fthmb.tqn.com/MOctroBGxCsx-gaXwyi4yKordJE=/5000x3333/filters:fill(auto,1)/scrambled-eggs-58a701ac5f9b58a3c91cbebd.jpg" 
+      },
+      {
+        "id": 10,
+        "name": "Toast",
+        "meal":"breakfast",
+        "ingredients": [
+            {
+                "quantity": "2",
+                "name": "slices of toast",
+                "type": "Misc"
+            },
+            {
+                "quantity": "1/4 stick",
+                "name": "butter",
+                "type": "Misc"
+            }
+        ],
+        "steps": [
+            "Remove two slices of toast from bag.",
+            "Place toast into toaster.",
+            "Set timer on toaster to desired crisp of toast.",
+            "Push down the switch to activate toasting.",
+            "Carefully remove toast from toaster.",
+            "Place toast on plate.",
+            "Butter toast to taste.",
+            "Enjoy!"
+        ],
+        "timers": [
+            0,
+            0,
+            0,
+            6,
+            0
+        ],
+        "imageURL": "https://th.bing.com/th/id/OIP.IP86pC4jDNKGyAVlUPM5zgHaE7?pid=ImgDet&rs=1" 
       }
     ]
 }

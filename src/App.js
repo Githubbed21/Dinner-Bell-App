@@ -6,7 +6,10 @@ import './App.css';
 
 function App() {
   return (
-      <h1>Who's Hungry!</h1>
+    <div 
+      className="App"><input type="text" placeholder="Search Meals"/>
+    </div>
+    
   );
 }
 

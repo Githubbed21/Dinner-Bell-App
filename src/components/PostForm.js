@@ -28,13 +28,13 @@ import axios from 'axios'
       <div>
         <form onSubmit={this.submitHandler}>
           <div>
-            <input type = "text" name= "name" value={name} onChange={this.changeHandler}/>
+            <input type = "text" name= "name" value={name} onChange={this.changeHandler} placeholder="Name"/>
           </div>
           <div>
-            <input type = "text" name= "meal" value={meal}  onChange={this.changeHandler}/>
+            <input type = "text" name= "meal" value={meal}  onChange={this.changeHandler} placeholder="name of dish"/>
           </div>
           <div>
-            <input type = "text" name= "ingredients" value={ingredients}  onChange={this.changeHandler}/>
+            <input type = "text" name= "ingredients" value={ingredients}  onChange={this.changeHandler} placeholder="how is it made"/>
           </div>
           <button type="submit">Submit</button>
         </form>

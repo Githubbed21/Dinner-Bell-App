@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
 import axios from 'axios'
 
  class PostForm extends Component {
@@ -20,6 +20,13 @@ import axios from 'axios'
    submitHandler = e => {
      e.preventDefault()
      console.log(this.state);
+     axios.post(' http://localhost:3001/Recipes', this.state)
+     .then(res => {
+       console.log(res)
+     })
+     .catch(error => {
+       console.log(error)
+     })
    }
 
   render() {
@@ -43,4 +50,4 @@ import axios from 'axios'
   }
 }
 
-export default PostForm
+export default PostForm;

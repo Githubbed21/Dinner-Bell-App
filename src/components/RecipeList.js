@@ -1,18 +1,40 @@
 import React from 'react'
+import RecipeCollection from './RecipeCollection'
+import RecipeForm from './RecipeForm'
+import Navbar from './NavBar'
+import { Container } from 'semantic-ui-react';
 
-const RecipesList = ({Recipes, title, HandleLike}) => {
+
+class RecipeList extends React.Component {
+
+  state ={
+    recipes: [],
+    searchTerm: "A-Z"
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:3001/Recipes')
+    .then(res => res.json())
+    .then((recipeArr) => {
+      this.setState({
+        recipes: recipeArr
+      })
+    })
+  }
+}
+
+render() {
   return (
-    <div className='recipe-list'>
-      <h2>{ title }</h2>
-      {Recipes.map((Recipes) => 
-      <div className='recipe-preview' key = {Recipes.id}>
-        <h2>{ Recipes.title }</h2>
-        <p>{ Recipes.directions}</p>
-        <button onClick={() => HandleLike(Recipes.id)}>Like Recipe!</button>
-        </div>
-        )}
-    </div>
-  );
+    <Container>
+      <h1>Recipe Nav</h1>
+      <br />
+      <RecipeForm />
+      <br />
+      <Navbar />
+      <br />
+      <RecipeCollection />
+    </Container>
+  )
 }
 
       

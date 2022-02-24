@@ -1,13 +1,13 @@
 import React from 'react';
 // import Home from './components/Home';
-// import NavBar from './components/NavBar';
+import NavBar from './components/NavBar';
 import RecipesList from './components/RecipeList';
 import RecipeCollection from './components/RecipeCollection';
+import RecipeForm from './components/RecipeForm';
 import RecipeCard from './components/RecipeCard';
-// import PostForm from './components/PostForm';
-// import AddRecipe from './components/AddRecipe';
-import './App.css';
+// import RecipeCard from './components/RecipeCard';
 
+import './App.css';
 
 
 function App() {
@@ -15,10 +15,11 @@ function App() {
     <div className="App">
         <RecipesList />
         <RecipeCollection />
+        <RecipeForm />
+        <RecipeCard />
         {/* <Home /> */}
-        {/* <PostForm /> */}
         {/* <NavBar /> */}
-        {/* <AddRecipe/> */}
+        
         <input type="text" placeholder="Search Meals"/>
     </div>
   );

@@ -2,14 +2,15 @@ import React from 'react'
 import RecipeCollection from './RecipeCollection'
 import RecipeForm from './RecipeForm'
 import Navbar from './NavBar'
-import { Container } from 'semantic-ui-react';
+import { Container } from 'semantic-ui-react'
+
 
 
 class RecipeList extends React.Component {
 
-  state ={
+  state = {
     recipes: [],
-    searchTerm: "A-Z"
+    searchTerm: ""
   }
 
   componentDidMount() {
@@ -21,22 +22,41 @@ class RecipeList extends React.Component {
       })
     })
   }
-}
+
+  changeSearchTerm = (theTermSearched) => {
+    this.setState({
+      searchTerm : theTermSearched
+    })
+  }
+
+  addRecipe = (singleRecipeFrom) => {
+    let theArrayOfRecipes = [singleRecipeFrom, ...this.state.recipes]
+    this.setState({
+      recipes: theArrayOfRecipes
+    })
+  }
+
 
 render() {
+  let theFilteredRecipeArray = this.state.recipes.filter((recipePojo) => {
+    return recipePojo.name.toLowerCase().includes(this.state.searchTerm.toLocaleLowerCase())
+  })
+
+
   return (
     <Container>
       <h1>Recipe Nav</h1>
       <br />
-      <RecipeForm />
+      <RecipeForm 
+      addRecipe={this.addRecipe}
+      />
       <br />
-      <Navbar />
+      <Navbar searchTerm ={this.state.searchTerm} changeSearchTerm = {this.changeSearchTerm}/>
       <br />
-      <RecipeCollection />
+      <RecipeCollection recipes = {theFilteredRecipeArray}/>
     </Container>
-  )
+    )
+  }
 }
 
-      
-
-export default RecipesList;
+export default RecipeList;

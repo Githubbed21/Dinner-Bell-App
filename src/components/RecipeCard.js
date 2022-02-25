@@ -8,23 +8,23 @@ class RecipeCard extends React.Component {
     clicked: false
   }
 
-  handleClick = (e) => {
+  handleClick = () => {
     this.setState({
       clicked: !this.state.clicked
     })
   }
 
   render() {
-    let {title, meal, directions} = this.props.recipe 
-    let {image} = this.props.recipe.image
+    let {name, meal, directions} = this.props.recipes
+    let ImageUrl = this.props.recipes.image
     return (
-      <Card>
+      <Card onClick={this.handleClick}>
         <div>
           <div className="image">
-            <img alt="I was hungry" src={this.state.image} />
+            <img alt="I was hungry" src={this.state.clicked ? ImageUrl : null } />
           </div>
           <div className="content">
-            <div className="header">{title}</div>
+            <div className="header">{name}</div>
           <div className="header">{meal}</div>
           <div className="body">{directions}</div>
           </div>

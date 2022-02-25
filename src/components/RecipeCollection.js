@@ -1,29 +1,16 @@
 import React from 'react'
+import RecipeCard from './RecipeCard'
 import { Card } from 'semantic-ui-react'
 
 
 class RecipeCollection extends React.Component {
-
-  returnsArrayOfComponents = () => {
-    return this.props.recipes.map((recipePOJO) => {
-      return <RecipeCard />
-    })
-  }
-
-
-  render() {
-    let arrayOfComponents = this.props.recipes.map((recipePOJO) => {
-      return <RecipeCard 
-      key={recipePOJO.id}
-      recipe={recipePOJO}
-      />
-    })
+  render () {
     return (
-      <Card.Group itemsPerRow={4}>
-        { arrayOfComponents }
+      <Card.Group itemsPerRow={6}>
+        {this.props.recipes.map(recipe => <RecipeCard recipe={recipe} key={recipe.id} /> )}
       </Card.Group>
     )
   }
 }
 
-export default RecipeCollection
+export default RecipeCollection 

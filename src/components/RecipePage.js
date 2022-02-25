@@ -1,7 +1,7 @@
 import React from 'react'
 import RecipeCollection from './RecipeCollection'
 import RecipeForm from './RecipeForm'
-import Navbar from './NavBar'
+import Search from './Search'
 import { Container } from 'semantic-ui-react'
 
 
@@ -51,7 +51,7 @@ render() {
       addRecipe={this.addRecipe}
       />
       <br />
-      <Navbar searchTerm ={this.state.searchTerm} changeSearchTerm = {this.changeSearchTerm}/>
+      <Search searchTerm ={this.state.searchTerm} changeSearchTerm = {this.changeSearchTerm}/>
       <br />
       <RecipeCollection recipes = {theFilteredRecipeArray}/>
     </Container>

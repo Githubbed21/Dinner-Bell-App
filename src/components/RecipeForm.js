@@ -5,9 +5,11 @@ class RecipeForm extends React.Component {
 
   state = {
     title:"",
-    meal:"",
-    directions:""
+    meal: "",
+    directions:"",
+    Image: ""
   }
+
 
   changeHandler = (e) => {
     this.setState({
@@ -21,7 +23,8 @@ class RecipeForm extends React.Component {
     let theObjectPosted = {
       title : this.state.title,
       meal : this.state.meal,
-      directions : this.state.directions
+      directions : this.state.directions,
+      image : this.state.ImageUrl
     }
   
   fetch("http://localhost:3001/Recipes", {
@@ -29,7 +32,8 @@ class RecipeForm extends React.Component {
     headers: {
       "content-type": "application/json"
     },
-    body: JSON.stringify(theObjectPosted)
+    body: JSON.stringify(theObjectPosted) 
+
   })
     .then(res => res.json())
     .then((newRecipe) => {
@@ -44,9 +48,11 @@ render () {
       <h3>Add a Recipe!</h3>
       <Form onSubmit = { this.handleSubmit }>
       <Form.Group widths = "equal">
-        <Form.Input fluid label ="title" value={this.state.title} onChange={this.changeHandler} placeholder="Your title" />
-        <Form.Input fluid label = "meal" value={this.state.meal}  onChange={this.changeHandler} placeholder="Name of Meal"/>
-        <Form.Input fluid label = "directions" value={this.state.directions}  onChange={this.changeHandler} placeholder="How is it made"/>
+        <Form.Input fluid label ="Title" value={this.state.title} onChange={this.changeHandler} placeholder="Name Of Dish" title='title' />
+        <Form.Input fluid label ="Meal" value={this.state.title} onChange ={this.changeHandler} placeholder='Meal of the day' meal='meal' />
+        <Form.Input fluid label = "Directions" value={this.state.directions}  onChange={this.changeHandler} placeholder="Recipe" directions="directions"/>
+        <Form.Input fluid label="Image URL" placeholder="url" name="ImageUrl" 
+            value={this.state.ImageUrl} onChange={this.changeHandler} />
       </Form.Group>
         <Form.Button>Submit</Form.Button>
       </Form>

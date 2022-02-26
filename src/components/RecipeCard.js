@@ -5,28 +5,31 @@ import {Card} from 'semantic-ui-react'
 class RecipeCard extends React.Component {
 
   state={
-    clicked: false
+    displayFont: true
+
   }
 
-  handleClick = () => {
-    this.setState({
-      clicked: !this.state.clicked
-    })
+  handleClick = (e) => {
+      e.preventDefault()
+    this.setState({displayFont: !this.state.displayFont})
   }
 
   render() {
-    let {name, meal, directions} = this.props.recipes
-    let ImageUrl = this.props.recipes.image
+   const {title, meal, directions} = this.props.recipes
+  const ImageUrl = this.props.recipe.image.find(ImageUrl).value
     return (
       <Card onClick={this.handleClick}>
         <div>
           <div className="image">
-            <img alt="I was hungry" src={this.state.clicked ? ImageUrl : null } />
+            <img src= {ImageUrl} alt="I was hungry" />
           </div>
           <div className="content">
-            <div className="header">{name}</div>
-          <div className="header">{meal}</div>
+            <div className="header">{title}</div>
+          <div className="text">{meal}</div>
           <div className="body">{directions}</div>
+          <span>
+            <i className="icon yum"/>
+          </span>
           </div>
         </div>
       </Card>

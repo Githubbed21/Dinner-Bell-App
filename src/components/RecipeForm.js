@@ -3,6 +3,10 @@ import { Form } from 'semantic-ui-react'
 
 class RecipeForm extends React.Component {
 
+  constructor() {
+    super()
+  }
+
   state = {
     title:"",
     meal: "",
@@ -37,7 +41,7 @@ class RecipeForm extends React.Component {
   })
     .then(res => res.json())
     .then((newRecipe) => {
-      this.props.addOnePokemon(newRecipe)
+      this.props.addRecipe(newRecipe)
     })
 
   }
@@ -48,13 +52,14 @@ render () {
       <h3>Add a Recipe!</h3>
       <Form onSubmit = { this.handleSubmit }>
       <Form.Group widths = "equal">
-        <Form.Input fluid label ="Title" value={this.state.title} onChange={this.changeHandler} placeholder="Name Of Dish" title='title' />
-        <Form.Input fluid label ="Meal" value={this.state.title} onChange ={this.changeHandler} placeholder='Meal of the day' meal='meal' />
-        <Form.Input fluid label = "Directions" value={this.state.directions}  onChange={this.changeHandler} placeholder="Recipe" directions="directions"/>
+        <Form.Input fluid label ="Title" value={this.state.title} onChange={this.changeHandler} placeholder="Name Of Dish" title='title' type="text" />
+        <Form.Input fluid label ="Meal" value={this.state.title} onChange ={this.changeHandler} placeholder='Meal of the day' meal='meal'type="text" />
+        <Form.Input fluid label = "Directions" value={this.state.directions}  onChange={this.changeHandler} placeholder="Recipe" directions="directions" type="text"/>
+
         <Form.Input fluid label="Image URL" placeholder="url" name="ImageUrl" 
             value={this.state.ImageUrl} onChange={this.changeHandler} />
       </Form.Group>
-        <Form.Button>Submit</Form.Button>
+        <Form.Button type="submit">Submit</Form.Button>
       </Form>
     </div>
     )

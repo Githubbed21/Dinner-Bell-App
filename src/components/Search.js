@@ -1,21 +1,23 @@
-import React from "react";
 
-
+import React, {useState} from 'react'
 
 const Search = props => {
 
-  let handleChange = (event) => {
-     props.changeSearchTerm(event.target.value)
+  let handleChange = (evt) => {
+    props.changeSearchTerm(evt.target.value)
   }
 
-  return ( 
-    <div className="ui icon search">
+  return (
+    <div className="ui search">
       <div className="ui icon input">
-        <input className="prompt" value={props.searchTerm} onChange={handleChange} />
+        
+        <input className="prompt" 
+          value={props.searchTerm} 
+          onChange={handleChange}
+        />
         <i className="search icon" />
       </div>
     </div>
   )
 }
-
-export default Search;
+export default Search

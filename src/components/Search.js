@@ -1,23 +1,18 @@
-
 import React, {useState} from 'react'
 
-const Search = props => {
 
-  let handleChange = (evt) => {
-    props.changeSearchTerm(evt.target.value)
-  }
+const [recipes, setRecipes] = useState([]);
+const [search, setSearch] = useState("");
+  const [query, setQuery] = useState('')
 
-  return (
-    <div className="ui search">
-      <div className="ui icon input">
-        
-        <input className="prompt" 
-          value={props.searchTerm} 
-          onChange={handleChange}
-        />
-        <i className="search icon" />
-      </div>
-    </div>
-  )
+const upDateSearch = e => {
+  setSearch(e.target.value)
 }
+const getSearch= e => {
+  e.preventDefault();
+  setQuery(search)
+  setSearch('')
+}
+
+
 export default Search

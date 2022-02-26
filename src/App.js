@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css';
-import RecipeCard from './components/RecipeCard';
 import Recipes from './components/Recipes';
+// import RecipeCard from './components/RecipeCard';
 // import Search from './components/Search';
 // import RecipePage from './components/RecipePage'
 // import RecipeCollection from './components/RecipeCollection';
@@ -14,7 +14,7 @@ const App = () => {
 
   const [recipes, setRecipes] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState('null')
 
   // const recipeCard = recipes.map((recipeObj) => {
   //   return <RecipeCard title={recipeObj.title} meal={recipeObj.meal} directions={recipeObj.directions} image={recipeObj.image} />
